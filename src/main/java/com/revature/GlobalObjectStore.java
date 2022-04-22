@@ -7,7 +7,7 @@ public class GlobalObjectStore {
     private static final Map<String, Object> globalStore = new HashMap<String, Object>();
 
     private GlobalObjectStore(){
-
+        //no need to build an object
     }
 
     public static void addObject(String name, Object obj) {

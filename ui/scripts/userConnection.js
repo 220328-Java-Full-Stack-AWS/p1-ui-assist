@@ -92,6 +92,11 @@ async function updateUserRequest(user) {
     return response;
 }
 
+/*
+Read funciton. Sends a GET request with our username in the header.
+We expect the API to return the matching user resource representation,
+and we return that to the invoking code.
+*/
 async function getUser(un) {
     let response = await fetch(
         userResourceURL,
@@ -106,6 +111,10 @@ async function getUser(un) {
     return response;
 }
 
+/*
+Delete function. Sends a DELETE request with a username in the header.
+We expect the API to return the now deleted user resource representation.
+*/
 async function deleteUser(un) {
     let response = await fetch(
         userResourceURL,
