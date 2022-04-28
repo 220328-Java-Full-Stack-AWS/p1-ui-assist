@@ -22,7 +22,7 @@
             </div>
             <div class="flexRow">
                 <label>Last name: </label>
-                <input type="text" id="lastName" placeholder="lastName" name="Smith">
+                <input type="text" id="lastName" placeholder="lastName" name="smith">
             </div>
             <div class="flexRow">
                 <label>Username: </label>
@@ -30,15 +30,15 @@
             </div>
             <div class="flexRow">
                 <label>Password: </label>
-                <input type="text" id="password" placeholder="password" name="N1n31nchn41ls!">
+                <input type="password" id="password" placeholder="password" name="N1n31nchn41ls!">
             </div>
             <div class="flexRow">
                 <label>Email: </label>
-                <input type="text" id="email" placeholder="email" name="john.smith@email.com">
+                <input type="email" id="email" placeholder="email" name="">
             </div>
 
             <!-- onclick="submitForm()" hooks into our javascript, calling the funciton below -->
-            <button id="contentBoxButton" onclick="submitForm()">Register</button>
+            <button class="btn" id="contentBoxButton" onclick="submitForm()">Register</button>
         </div>
 
 
@@ -59,11 +59,14 @@
             the input elements above.
             */
             let newUser = {
-                username: document.getElementById("username").value,
-                password: document.getElementById("password").value,
+
                 firstName: document.getElementById("firstName").value,
                 lastName: document.getElementById("lastName").value,
-                email: document.getElementById("email").value
+                username: document.getElementById("username").value,
+                password: document.getElementById("password").value,
+                email: document.getElementById("email").value,
+                roleId: 1
+
             }
             console.log(newUser);//fact finding
 

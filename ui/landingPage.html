@@ -9,7 +9,50 @@
 </head>
 
 <body>
-    <p id="pageContent"><!-- Our inserted content will go here --></p>
+    <p id="pageContent">
+        <!-- Our inserted content will go here -->
+    </p>
+
+    <script>
+        let newUser = {
+
+            firstName: document.getElementById("firstName").value,
+            lastName: document.getElementById("lastName").value,
+            username: document.getElementById("username").value,
+            password: document.getElementById("password").value,
+            email: document.getElementById("email").value,
+            roleId: 1
+
+        }
+        console.log(newUser);//fact finding
+
+
+    </script>
+
+
+
+
+    <ul>
+        <li>
+            <button class="btn" name="">all Reimbursements</button>
+        </li>
+        <br>
+        <li>
+            <button class="btn">resolved Reimbursements</button>
+        </li>
+        <br>
+        <li>
+            <button class="btn">pending Reimbursements </button>
+        </li>
+        <br>
+        <li>
+            <button class="btn">new Reimbursements </button>
+        </li>
+    </ul>
+
+
+
+
 
     <!-- This imports a script file, in this case it imports the exported scripts from that file -->
     <script src="./scripts/userConnection.js"></script>

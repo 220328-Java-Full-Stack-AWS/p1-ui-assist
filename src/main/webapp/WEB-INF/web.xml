@@ -6,8 +6,43 @@
         version="2.5">
 
     <listener>
-        <listener-class>com.revature.servlets.DependencyLoaderListener</listener-class>
+        <listener-class>revagenda.servlets.DependencyLoaderListener</listener-class>
     </listener>
+
+    <servlet-mapping>
+        <servlet-name>register</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>register</servlet-name>
+        <servlet-class>revagenda.servlets.AuthServlet</servlet-class>
+    </servlet>
+
+
+
+    <servlet-mapping>
+        <servlet-name>healthServlet</servlet-name>
+        <url-pattern>/health</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>healthServlet</servlet-name>
+        <servlet-class>revagenda.servlets.HealthServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>toDoItemServlet</servlet-name>
+        <url-pattern>/ToDoItem</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>toDoItemServlet</servlet-name>
+        <servlet-class>revagenda.servlets.ToDoItemServlet</servlet-class>
+    </servlet>
+
 
     <servlet-mapping>
         <servlet-name>reimbursementServlet</servlet-name>
@@ -16,23 +51,23 @@
 
     <servlet>
         <servlet-name>reimbursementServlet</servlet-name>
-        <servlet-class>com.revature.servlets.ReimbursementServlet</servlet-class>
+        <servlet-class>revagenda.servlets.ReimbursementServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>userServlet</servlet-name>
-        <url-pattern>/user</url-pattern>
+        <servlet-name>UserServlet</servlet-name>
+        <url-pattern>/User</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>userServlet</servlet-name>
-        <servlet-class>com.revature.servlets.UserServlet</servlet-class>
+        <servlet-name>UserServlet</servlet-name>
+        <servlet-class>revagenda.servlets.UserServlet</servlet-class>
     </servlet>
 
     <!-- CORS FILTER -->
     <filter>
         <filter-name>CorsFilter</filter-name>
-        <filter-class>com.revature.servlets.CorsFilter</filter-class>
+        <filter-class>revagenda.servlets.CorsFilter</filter-class>
     </filter>
 
     <filter-mapping>

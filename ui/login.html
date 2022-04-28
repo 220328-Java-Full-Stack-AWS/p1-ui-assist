@@ -12,6 +12,7 @@
     and some javascript to find them and see their data. The classes are for styling. We are
     putting a visible box "contentBox" around a flexbox arranged as a column. The flexbox contains
     "flexRow"s which have the input elements.-->
+
 <body>
     <div class="contentBox">
         <div class="flexColumn">
@@ -41,13 +42,14 @@
             Build the object we will transfer in our API call. Grab the values from
             the input elements above.
             */
-            let authDto = {
+            let newUser = {
                 username: document.getElementById("username").value,
                 password: document.getElementById("password").value
             }
 
+            console.log(newUser.username);
             //Make our asynchronous API call
-            let response = await loginRequest(authDto);
+            let response = await loginRequest(newUser);
 
             console.log("Response: ", response);//fact finding
             console.log("Response JSON: ", response.json());//we should delete these later
